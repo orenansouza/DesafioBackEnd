@@ -91,42 +91,35 @@ Esse método deve receber um pedido de venda novo e inseri-lo em um banco de dad
 
 ```json
 {
-  "id": 0,
+  "id": 1,
   "created_at": "2018-08-27T02:11:43Z",
   "status": "CONCLUDED",
   "total": 189.80,
-  "buyer": {
-    "id": 1,
-    "name": "Maria Aparecida de Souza",
-    "cpf": "81258705044",
-    "email": "mariasouza@email.com"
-  },
+  "customer_id": "5d002ad9f3b85d2f38a5da2d",
   "items": [
     {
-      "amount": 1,
-      "price_unit": 109.90,
-      "total": 109.90,
-      "product": {
-        "id": 1,
-        "sku": 8552515751438644,
-        "title": "Casaco Jaqueta Outletdri Inverno Jacquard"
-      }
-    },
+		 "id": 1,
+		 "sku":8552515751438645,
+		 "order_id": 1,
+		 "amount": 1,
+		 "price_unit": 109.90,
+		 "total": 109.90,
+		 "product_id":  "5d00321221f5a3124484bc5a"
+      },
     {
-      "amount": 1,
-      "price_unit": 79.90,
-      "total": 79.90,
-      "product": {
-        "id": 2,
-        "sku": 8552515751438645,
-        "title": "Camiseta Colcci Estampada Azul"
-      }
+		"id":2,
+		"sku":8552515751438644,
+		"order_id": 1,
+		"amount": 1,
+		"price_unit": 79.90,
+		"total": 79.90,
+		"product_id": "5d00323621f5a3124484bc5c"
     }
   ]
 }
 ```
 
-### PUT `http://localhost:4000/{{ID_ORDER}}`
+### PUT `http://localhost:4000/orders/{{ID_ORDER}}`
 
 Esse método atualiza o status para "CANCELED" o pedido de venda informado.
 
@@ -137,7 +130,7 @@ Esse método atualiza o status para "CANCELED" o pedido de venda informado.
 }
 ```
 
-### GET `/v1/orders`
+### GET `http://localhost:4000/orders`
 
 Esse método da API deve retornar o seguinte JSON.
 
