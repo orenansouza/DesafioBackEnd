@@ -14,16 +14,6 @@ exports.get = (req, res, next) => {
             res.status(400).send(e);
         });;
 };
-exports.getById = (req, res, next) => {
-    Customer.findById({ id: req.params.id },
-        'id name cpf email created_at updated_at')
-        .then(x => {
-            res.status(200).send(x);
-        })
-        .catch(e => {
-            res.status(400).send(e);
-        });;
-};
 exports.post = (req, res, next) => {
     if (validarCpf(req.body.cpf)) {
         var customer = new Customer(req.body);

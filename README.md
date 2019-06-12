@@ -1,9 +1,9 @@
-## Instalação
+﻿## Instalação
 
 - npm install
 
 - Faça download do Postman para fazer as requisições.
-Link Download para Windowns, Linux ou MacOs: https://www.getpostman.com/downloads/
+Link Download para Windowns, Linux e MacOs: https://www.getpostman.com/downloads/
   
 ## Executar
 

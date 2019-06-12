@@ -18,7 +18,7 @@ const schema = new Schema({
         type: Number,
         required: true,
         unique: false,
-        
+
     },
     status: {
         type: String,
@@ -29,6 +29,9 @@ const schema = new Schema({
     created_at: {
         type: Date,
         required: true
+    },
+    cancelDate: {
+        type: Date
     },
     items: [{
         id: {
@@ -56,7 +59,7 @@ const schema = new Schema({
             type: Number,
             required: true
         }
-    }],
+    }]
 });
 
 module.exports = mongoose.model('Order', schema);
